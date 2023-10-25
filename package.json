@@ -1,0 +1,20 @@
+{
+  "name": "dizzyrehabhub2",
+  "version": "1.0.0",
+  "description": "app for vestibular exercises, geared towards Physical Therapists",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ali-Herrera/dizzyRehab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ali-Herrera/dizzyRehab/issues"
+  },
+  "homepage": "https://github.com/Ali-Herrera/dizzyRehab#readme",
+  "keywords": []
+}
