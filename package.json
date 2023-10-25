@@ -1,20 +1,35 @@
 {
-  "name": "dizzyrehabhub2",
+  "name": "binary-upload-boom",
   "version": "1.0.0",
-  "description": "app for vestibular exercises, geared towards Physical Therapists",
+  "description": "100Devs Social Network",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Ali-Herrera/dizzyRehab.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ali-Herrera/dizzyRehab/issues"
-  },
-  "homepage": "https://github.com/Ali-Herrera/dizzyRehab#readme",
-  "keywords": []
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.41.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.7.4",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.5",
+    "validator": "^13.6.0"
+  }
 }
