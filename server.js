@@ -2,15 +2,15 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const passport = require("passport");
-const PORT = process.env.PORT || 5687
+const PORT = process.env.PORT; 
 const session = require("express-session");
-const MongoStore = require("connect-mongo");
+const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
-// const mainRoutes = require("./routes/main");
-// const exercisesRoutes = require("./routes/posts");
+const mainRoutes = require("./routes/main");
+const exercisesRoutes = require("./routes/exercises");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -43,7 +43,7 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore({ mongooseConnection: mongoose.connection }),
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
 
@@ -55,8 +55,8 @@ app.use(passport.session());
 app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
-// app.use("/", mainRoutes);
-// app.use("/post", exercisesRoutes);
+app.use("/", mainRoutes);
+app.use("/exercise", exercisesRoutes);
 
 
 //Server Running
