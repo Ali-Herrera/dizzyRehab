@@ -1,0 +1,44 @@
+<!--create a page that has all of the available exercises to choose from in a grid for users to click into for more information-->
+
+<%- include('partials/logged-in-header') -%>
+<div class="container card-container">
+  <h1>Explore Exercises</h1>
+  <p>These have been created by other users.</p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% for(var i=0; i<posts.length; i++) {%>
+  <div class="col">
+    <div class="card h-100">
+      <img src="<%= posts[i].image%>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= posts[i].title%></h5>
+        <p class="card-text"><i class="px-1 bi bi-heart"></i>Likes: <%= posts[i].likes %></p>
+        <% console.log("Post Data: ", posts[i]); %><p class="card-text"><small class="text-muted">By: <%= posts[i].user && posts[i].user.userName ? posts[i].user.userName : "Unknown" %></small></p>
+        <!-- <p class="card-text"><%= posts[i].caption %></p> -->
+        <a href="/post/<%= posts[i]._id%>" class="btn btn-outline-primary">View Exercise</a>
+      </div>
+    
+    </div>
+  </div>
+  <% } %>
+</div>
+</div>
+<%- include('partials/footer') -%>
+
+
+
+
+
+<!--original feed view-->
+<!-- <div class="container">
+    <div class="row justify-content-center mt-5">
+      <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+            </a>
+          </li>
+        <% } %>
+        </ul>
+    </div>
+  </div>   -->

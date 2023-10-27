@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ExerciseSchema = new mongoose.Schema({
+const PostSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -13,7 +13,7 @@ const ExerciseSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  description: {
+  caption: {
     type: String,
     required: true,
   },
@@ -21,8 +21,9 @@ const ExerciseSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  saves: {
-    type: Number,
+  bookmarks: {
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+    default: [],
     required: true,
   },
   user: {
@@ -35,4 +36,4 @@ const ExerciseSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Exercise", ExerciseSchema);
+module.exports = mongoose.model("Post", PostSchema);

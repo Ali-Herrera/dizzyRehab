@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const passport = require("passport");
-const PORT = process.env.PORT; 
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
@@ -10,7 +9,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
-const exercisesRoutes = require("./routes/exercises");
+const postRoutes = require("./routes/posts");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -56,10 +55,10 @@ app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
-app.use("/exercise", exercisesRoutes);
+app.use("/post", postRoutes);
 
 
 //Server Running
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${PORT}.`);
+  console.log(`Server is running, you better go catch it!`);
 });

@@ -1,4 +1,4 @@
-<%- include('partials/header') -%>
+<%- include('partials/logged-in-header') -%>
 <div class="container">
   <div class="row mt-5">
       <div class="col-6">
@@ -8,7 +8,7 @@
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
           <div class="mt-5">
-            <h2>Add a post</h2>
+            <h2>Add An Exercise</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
@@ -16,7 +16,7 @@
               </div>
               <div class="mb-3">
                 <label for="caption" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description"></textarea>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
               </div>
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
