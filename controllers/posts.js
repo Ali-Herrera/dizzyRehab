@@ -48,6 +48,7 @@ module.exports = {
         caption: req.body.caption,
         likes: 0,
         user: req.user.id,
+        source: req.body.source,
       });
       console.log("Post has been added!");
       res.redirect("/profile");
