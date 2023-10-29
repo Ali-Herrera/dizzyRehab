@@ -1,17 +1,27 @@
 <%- include('partials/header') -%>
 
 
-<div class="hero min-h-screen bg-base-200">
-    
-      <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
-      <div>
-        <h1 class="">Welcome!</h1>
-        <p class="">Login or Sign Up to get started.</p>
-        <a href="/login" class="col-3 btn btn-primary bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Signup</a>
+<header class="bg-dark py-5">
+  <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+          <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="my-5 text-center text-xl-start">
+                  <h1 class="display-5 fw-bolder text-white mb-2">Dizzy Rehab Hub</h1>
+                  <p class="lead fw-normal text-white-50 mb-4">The Vestibular Physical Therapist's Exercise Resource.</p>
+                  <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                      <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/login">Login</a>
+                      <a class="btn btn-outline-light btn-lg px-4" href="/signup">Sign Up</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://i.ibb.co/9wdHSkd/vestib-Graphic1.png" alt="..." /></div>
       </div>
+  </div>
+</header>
+
+
     
-</div>
+
     
 
 <%- include('partials/footer') -%>

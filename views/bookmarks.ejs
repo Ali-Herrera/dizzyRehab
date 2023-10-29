@@ -1,18 +1,21 @@
 <%- include('partials/logged-in-header') -%>
 
+<div class="text-center"> 
+  <h1 class="fw-bolder">Bookmarked Exercises</h1>
+  <p class="lead fw-normal text-muted mb-5"> These are the exercises you have bookmarked.</p>
+</div>
 <div class="container card-container">
-  <h1>My Bookmarked Exercises</h1>
   <% console.log(posts[0]) %> 
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <% for(var i=0; i<posts.length; i++) {%>
       <%if(posts[i].bookmarks.includes(user.id)) {%>
     <div class="col">
-      <div class="card h-100">
+      <div class="card h-100 shadow border-0">
         <img src="<%= posts[i].image%>" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title"><%= posts[i].title%></h5>
+          <h5 class="card-title mb-3"><%= posts[i].title%></h5>
           <p class="card-text"></p>
-          <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">View Exercise</a>
+          <a href="/post/<%= posts[i]._id%>" class="btn btn-outline-primary">View Exercise</a>
           <!-- <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">Edit</a> -->
         </div>
         <!-- <div class="card-footer">

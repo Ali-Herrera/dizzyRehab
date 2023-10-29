@@ -23,23 +23,25 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-    <!-- Core theme TailwindCSS-->
-  <!-- <link rel="stylesheet" href="./css/output.css"> -->
+  
   <!-- Core theme CSS-->
-  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header class="container">
+    <header class="container-fluid">
       <div class="text-center">
-        <h1 class="travel-photos"><a href="/profile">Dizzy Rehab Hub</a></h1>
-        <span class="text-red-500">The Vestibular Physical Therapist's Resource Guide</span>
-        <nav>
-          <ul>
-            <li><a href="/feed">Explore</a></li>
-            <li><a href="/profile">My Exercises</a></li>
-            <li><a href="/saved">Saved</a></li>
-            <li><a href="/profile">Create New</a></li>
-          </ul>
+        <!-- <h1 class="display-2 text-decoration-none"><a href="/profile">Dizzy Rehab Hub</a></h1>
+        <span class="text-gray">The Vestibular Physical Therapist's Exercise Resource</span> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container px-5">
+              <a class="navbar-brand" href="/profile">Dizzy Rehab Hub</a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="/feed">Explore</a></li>
+              <li class="nav-item"><a class="nav-link" href="/profile">My Exercises</a></li>
+              <li class="nav-item"><a class="nav-link" href="/saved">Saved</a></li>
+              <li class="nav-item"><a class="nav-link" href="/profile">Create New</a></li>
+            </ul>
+        </div>
         </nav>
       </div>
     </header>

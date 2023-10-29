@@ -1,43 +1,43 @@
 <%- include('partials/logged-in-header') -%>
-<div class="container">
+<div class="container ">
   <div class="row mt-5">
-      <div class="col-6">
+      <div class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5 col-6">
           <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+              <p class="text-white" ><strong>User Name</strong>: <%= user.userName %></p>
+              <p class="text-white" ><strong>Email</strong>: <%= user.email %></p>
+              <a href="/logout" class="btn btn-outline-light btn-lg px-4">Logout</a>
           </div>
           <div class="mt-5">
-            <h2>Add An Exercise</h2>
+            <h2 class="fs-3 fw-bold text-white">Add An Exercise</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <label for="title" class="form-label text-white">Title</label>
+                  <input type="text" class="form-control" id="title" name="title" placeholder="Name your exercise..." aria-label="Name your exercise...">
               </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Description</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
+                <label for="caption" class="form-label text-white">Description</label>
+                <textarea class="form-control" id="caption" name="caption" placeholder="Describe your exercise..." aria-label="Describe your exercise..."></textarea>
               </div>
               <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
+                <label for="imgUpload" class="form-label text-white">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+              <button type="submit" class="btn btn-outline-light btn-lg px-4" value="Upload">Submit</button>
             </form>
           </div>
       </div>
-      <div class="col-6">
+      <div class="bg-white bg-gradient rounded-3 p-4 p-sm-5 mt-5 col-6">
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+              <img class="img-fluid rounded-3" src="<%= posts[i].image%>">
             </a>
           </li>
         <% } %>
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Explore Page</a>
+          <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/feed">Return to Explore Page</a>
         </div>  
       </div>  
     </div>
