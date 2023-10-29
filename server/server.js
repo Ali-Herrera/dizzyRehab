@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require('path');
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -19,6 +20,10 @@ require("./config/passport")(passport);
 
 //Connect To Database
 connectDB();
+
+// Set the views directory to your frontend/views folder
+app.set('views', path.join(__dirname, '../frontend/views'));
+
 
 // //Using EJS for views
 app.set("view engine", "ejs");
