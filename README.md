@@ -1,7 +1,7 @@
 # Dizzy Rehab Hub
 The Vestibular Physical Therapist's Exercise Resource.
 
-A place for PTs who treat individuals with vestibular conditions to collaborate. Make your own exercise to add to the collection, view ones others have made, like your favorites, and save the ones you use most frequently.
+A place for PTs who treat individuals with vestibular conditions to collaborate. Make your own exercise to add to the collection, view ones others have made, like your favorites, and save the ones you use most frequently. <br>
 **Link to project:** https://dizzy-rehab-hub.onrender.com/
 
 <img width="1122" alt="DizzyRehab" src="https://github.com/Ali-Herrera/dizzyRehab/assets/122916748/fb457fa5-d5f3-427f-97e5-e0dd3c8f10a1">
