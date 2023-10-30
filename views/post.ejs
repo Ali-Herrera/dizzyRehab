@@ -19,7 +19,10 @@
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-heart"></i> 
+        </button>
+          
         </form>
 
         <!-- Bookmark Button Form -->
@@ -28,7 +31,9 @@
           action="/post/bookmarkPost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-bookmark" type="submit"></button>
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-bookmark"></i>
+        </button>
         </form>
 
         <h3 class="col-3 fs-3 fw-bold text-black">Likes: <%= post.likes %></h3>
@@ -38,7 +43,9 @@
           method="POST"
           class="col-3"
         >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-trash"></i>
+          </button>
         </form>
         <%}%>
       </div>
