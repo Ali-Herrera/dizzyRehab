@@ -21,9 +21,6 @@ require("./config/passport")(passport);
 //Connect To Database
 connectDB();
 
-// Set the views directory to your frontend/views folder
-app.set('views', path.join(__dirname, '../frontend/views'));
-
 
 // //Using EJS for views
 app.set("view engine", "ejs");
