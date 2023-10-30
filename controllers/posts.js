@@ -33,11 +33,25 @@ module.exports = {
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      res.render("post.ejs", { post: post, user: req.user  });
+      
+      // Retrieve the user from the users collection by ObjectId
+      const user = await User.findById(post.user);
+  
+      if (!user) {
+        // Handle the case where the user is not found.
+        console.log("User not found.");
+        return res.status(404).send("User not found");
+      }
+  
+      // Extract the userName from the user object
+      const userName = user.userName;
+  
+      res.render("post.ejs", { post, userName, user });
     } catch (err) {
       console.log(err);
     }
   },
+  
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary

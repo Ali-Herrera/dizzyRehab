@@ -1,16 +1,16 @@
 <!--this page should render a picture, title, description and possible drop downs for duration and frequency if possible-->
 
 <%- include('partials/logged-in-header') -%>
-<div class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+<div class="bg-light bg-gradient rounded-3 p-4 p-sm-5 mt-5">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
-      <h2 class="fs-3 fw-bold text-white"><%= post.title %></h2>
+      <h2 class="fs-3 fw-bold text-black"><%= post.title %></h2>
       <img class="img-fluid" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <div class="caption-profile">
-            <p class="text-white"><strong>Username:</strong> <%= user.userName %></p>
-            <p class="text-white"><strong>Description:</strong> <%= post.caption %></p>
-            <p class="text-white"><strong>Source:</strong> <%= post.source %></p>
+            <p class="text-black"><strong>Username:</strong> <%= user.userName %></p>
+            <p class="text-black"><strong>Description:</strong> <%= post.caption %></p>
+            <p class="text-black"><strong>Source:</strong> <%= post.source %></p>
         </div>
 
         <!-- Like Button Form -->
@@ -19,7 +19,7 @@
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-outline-light fa fa-heart" type="submit"></button>
+          <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
 
         <!-- Bookmark Button Form -->
@@ -28,17 +28,17 @@
           action="/post/bookmarkPost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-outline-light fa fa-bookmark" type="submit"></button>
+          <button class="btn btn-primary fa fa-bookmark" type="submit"></button>
         </form>
 
-        <h3 class="col-3 fs-3 fw-bold text-white">Likes: <%= post.likes %></h3>
+        <h3 class="col-3 fs-3 fw-bold text-black">Likes: <%= post.likes %></h3>
         <%if(post.user == user.id){ %>
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
           method="POST"
           class="col-3"
         >
-          <button class="btn btn-outline-light fa fa-trash" type="submit"></button>
+          <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         <%}%>
       </div>
