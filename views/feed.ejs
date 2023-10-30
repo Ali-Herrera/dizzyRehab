@@ -15,7 +15,7 @@
           <h5 class="card-title mb-3"><%= posts[i].title%></h5>
           <p class="card-text mb-3"><i class="px-1 bi bi-heart"></i>Likes: <%= posts[i].likes %></p>
           <!-- <% console.log("Post Data: ", posts[i]); %><p class="card-text"><small class="text-muted">By: <%= posts[i].user && posts[i].user.userName ? posts[i].user.userName : "Unknown" %></small></p> -->
-          <!-- <p class="card-text"><%= posts[i].caption %></p> -->
+
           <a href="/post/<%= posts[i]._id%>" class="btn btn-outline-primary">View Exercise</a>
         </div>
       

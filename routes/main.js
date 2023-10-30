@@ -13,7 +13,7 @@ router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
-router.get("/saved", ensureAuth, postsController.getBookmarks);
+router.get("/bookmarks", ensureAuth, postsController.getBookmarks);
 router.post("/signup", authController.postSignup);
 
 module.exports = router;
