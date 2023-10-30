@@ -14,7 +14,9 @@ module.exports = {
   },
   getBookmarks: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
+      console.log('User ID:', req.user.id);
+      const posts = await Post.find({ "bookmarks": req.user.id });
+      console.log('Bookmarked Posts:', posts);
       res.render("bookmarks.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
@@ -76,7 +78,7 @@ module.exports = {
       const post = await Post.findById(req.params.id);
   
       if (!post) {
-        return res.status(404).send('Post not found');
+        return bookmarkres.status(404).send('Post not found');
       }
   
       const user = req.user;
